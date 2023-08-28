@@ -33,6 +33,9 @@ Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |vb, override|
         vb.customize ["modifyvm", :id, "--memory", 4096]
+        vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
+        vb.customize ["modifyvm", :id, "--uart1", "0x3F8", "4"]
+        vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
     end
 
     # Define shell:
