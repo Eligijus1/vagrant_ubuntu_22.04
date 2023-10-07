@@ -16,6 +16,7 @@ Vagrant.configure("2") do |config|
 
     # Configures networks on the machine:
     # config.vm.network "private_network", type: "dhcp"
+	# config.vm.network "public_network", ip: "192.168.0.17"
     config.vm.network "private_network", ip: "172.28.128.22"
     
     if Vagrant.has_plugin?("vagrant-hostmanager")
