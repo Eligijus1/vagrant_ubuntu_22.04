@@ -39,38 +39,48 @@ sudo docker run hello-world
 sudo apt remove needrestart -y
 
 # PHP install:
-sudo apt install php -y
-sudo apt install php-cli unzip -y
-sudo apt install php-curl -y
-sudo apt install php-gd -y
-sudo apt install php-bcmath -y
-sudo apt install -y php-dev # This library required to compile PHP modules.
-sudo apt install php-intl -y
-sudo apt install php-amqp -y
-sudo apt install php-pgsql -y
-sudo apt install php-mbstring -y
-sudo apt install php-zip -y
-sudo apt install php-redis -y
-php -v
-php -m
+#sudo apt install php -y
+#sudo apt install php-cli unzip -y
+#sudo apt install php-curl -y
+#sudo apt install php-gd -y
+#sudo apt install php-bcmath -y
+#sudo apt install -y php-dev # This library required to compile PHP modules.
+#sudo apt install php-intl -y
+#sudo apt install php-amqp -y
+#sudo apt install php-pgsql -y
+#sudo apt install php-mbstring -y
+#sudo apt install php-zip -y
+#sudo apt install php-redis -y
+#php -v
+#php -m
 
 # Install composer:
-cd /tmp/
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-composer -V
+#cd /tmp/
+#curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+#composer -V
 
 # Install symfony CLI:
-curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
-sudo apt install symfony-cli -y
-symfony -v
+#curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+#sudo apt install symfony-cli -y
+#symfony -v
 
 # Install nodjs & npm:
-sudo apt install nodejs -y
-sudo apt install npm -y
+#sudo apt install nodejs -y
+#sudo apt install npm -y
 
 # Install aws cli:
 sudo apt install awscli -y
 aws --version
+
+# Install docker-compose:
+sudo apt-get install docker-compose -y
+docker-compose -v
+
+# Setup docker user permissions:
+sudo groupadd docker
+#sudo usermod -aG docker ${USER}
+sudo usermod -aG docker ubuntu
+sudo usermod -aG docker vagrant
 
 # Inform about finish:
 echo "+-------------------------------------+"
