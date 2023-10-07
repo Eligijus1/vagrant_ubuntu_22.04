@@ -22,6 +22,9 @@ sudo apt-get install -y git
 # Install zip:
 sudo apt-get install -y zip unzip
 
+# Install net-tools:
+sudo apt install -y net-tools
+
 # Install docker:
 sudo apt-get install ca-certificates curl gnupg -y
 sudo install -m 0755 -d /etc/apt/keyrings
