@@ -15,9 +15,10 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "vagrant-ubuntu-22.test"
 
     # Configures networks on the machine:
+    config.vm.network "public_network"
     # config.vm.network "private_network", type: "dhcp"
 	# config.vm.network "public_network", ip: "192.168.0.17"
-    config.vm.network "private_network", ip: "172.28.128.22"
+    # config.vm.network "private_network", ip: "172.28.128.22"
     
     if Vagrant.has_plugin?("vagrant-hostmanager")
         config.hostmanager.enabled = true
@@ -31,13 +32,6 @@ Vagrant.configure("2") do |config|
         end
 
     end
-
-    #config.vm.provider :virtualbox do |vb, override|
-    #    vb.customize ["modifyvm", :id, "--memory", 4096]
-    #    vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
-    #    vb.customize ["modifyvm", :id, "--uart1", "0x3F8", "4"]
-    #    vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
-    #end
 
     config.vm.provider :virtualbox do |v|
 	    v.customize ["modifyvm", :id, "--memory", 4096]
