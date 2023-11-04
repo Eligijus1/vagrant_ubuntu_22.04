@@ -82,6 +82,9 @@ sudo groupadd docker
 sudo usermod -aG docker ubuntu
 sudo usermod -aG docker vagrant
 
+# jq is like sed for JSON data - you can use it to slice and filter:
+sudo apt-get install jq -y
+
 # Inform about finish:
 echo "+-------------------------------------+"
 echo "|                                     |"
