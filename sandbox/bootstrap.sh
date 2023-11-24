@@ -39,7 +39,9 @@ sudo docker run hello-world
 sudo apt remove needrestart -y
 
 # PHP install:
-#sudo apt install php -y
+sudo apt install php-cli -y
+sudo apt install php-sqlite3 -y
+sudo apt install php-dom -y
 #sudo apt install php-cli unzip -y
 #sudo apt install php-curl -y
 #sudo apt install php-gd -y
@@ -55,14 +57,16 @@ sudo apt remove needrestart -y
 #php -m
 
 # Install composer:
-#cd /tmp/
-#curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-#composer -V
+cd /tmp/
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+composer -V
 
 # Install symfony CLI:
 #curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
 #sudo apt install symfony-cli -y
 #symfony -v
+#cd /tmp/
+#wget https://get.symfony.com/cli/installer -O - | bash
 
 # Install nodjs & npm:
 #sudo apt install nodejs -y
