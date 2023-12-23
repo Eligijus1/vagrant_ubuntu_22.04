@@ -42,8 +42,8 @@ sudo apt remove needrestart -y
 sudo apt install php-cli -y
 sudo apt install php-sqlite3 -y
 sudo apt install php-dom -y
-#sudo apt install php-cli unzip -y
-#sudo apt install php-curl -y
+sudo apt install php-cli unzip -y
+sudo apt install php-curl -y
 #sudo apt install php-gd -y
 #sudo apt install php-bcmath -y
 #sudo apt install -y php-dev # This library required to compile PHP modules.
@@ -51,10 +51,10 @@ sudo apt install php-dom -y
 #sudo apt install php-amqp -y
 #sudo apt install php-pgsql -y
 #sudo apt install php-mbstring -y
-#sudo apt install php-zip -y
+sudo apt install php-zip -y
 #sudo apt install php-redis -y
-#php -v
-#php -m
+php -v
+php -m
 
 # Install composer:
 cd /tmp/
