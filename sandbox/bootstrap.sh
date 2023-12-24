@@ -53,6 +53,8 @@ sudo apt install php-curl -y
 #sudo apt install php-mbstring -y
 sudo apt install php-zip -y
 #sudo apt install php-redis -y
+sudo apt install php-pdo -y
+sudo apt install php-pdo-mysql -y
 php -v
 php -m
 
