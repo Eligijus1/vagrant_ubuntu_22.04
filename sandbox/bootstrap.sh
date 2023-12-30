@@ -55,6 +55,7 @@ sudo apt install php-zip -y
 #sudo apt install php-redis -y
 sudo apt install php-pdo -y
 sudo apt install php-pdo-mysql -y
+sudo apt install php-imap -y
 php -v
 php -m
 
